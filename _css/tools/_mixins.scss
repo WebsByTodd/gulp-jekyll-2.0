@@ -1,0 +1,38 @@
+@mixin button {
+  @include body;
+  position: relative;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 5px $page-margin-mobile;
+  @media #{$mq-medium} {
+    padding: 5px $content-margin;
+  }
+  text-decoration: none;
+  -webkit-appearance: none; // prevent weird iOS look with <button> elements
+  overflow: hidden;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+@mixin box-sizing {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+@function palette($palette, $tone) {
+  @if not map-has-key($palettes, $palette) {
+    @warn "No palette found for `#{$palette}` in $palettes map. Property omitted.";
+  }
+
+  @return map-get(map-get($palettes, $palette), $tone);
+}

@@ -1,0 +1,34 @@
+// ------------------------------------
+//     GLOBAL IMPORTS
+// ------------------------------------
+
+// Global mixins, functions
+@import "tools/_variables.scss";
+@import "tools/_mixins.scss";
+
+// Global settings, mostly variables
+@import "settings/_fonts.scss";
+@import "settings/_mediaQueries.scss";
+@import "settings/_colors.scss";
+
+// Components styles
+@import 'components/all';
+
+body {
+  margin: 0;
+  padding: 0;
+  &.noscroll {
+    overflow: hidden;
+  }
+  &.fade {
+    background-color: #000;
+    > :not(.header) {
+      opacity: 0.4;
+    }
+  }
+}
+
+html {
+  font-size: 10px; // For easy rem units
+  box-sizing: border-box;
+}

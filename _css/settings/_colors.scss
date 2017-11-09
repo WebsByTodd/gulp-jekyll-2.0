@@ -1,0 +1,56 @@
+//     COLOR
+//
+//     Where all color's variables are defined
+//
+//     Thanks to SASS Map, we can define all colors at one place.
+//     We also respect our BEM like notation and files architecture.
+
+$base: blue;
+$base-dark: blue;
+$base-darkest: blue;
+$base-light: blue;
+$base-lightest: blue;
+
+$secondary: green;
+$secondary-dark: green;
+$secondary-darkest: green;
+$secondary-light: green;
+$secondary-lightest: green;
+
+$tertiary: yellow;
+$tertiary-dark: yellow;
+$tertiary-darkest: yellow;
+$tertiary-light: yellow;
+$tertiary-lightest: yellow;
+
+$action: red;
+$action-dark: red;
+$action-darkest: red;
+$action-light: red;
+$action-lightest: red;
+
+$white: #fff;
+$black: #000;
+
+
+$palettes: (
+  header:
+    (
+      background: $white
+    ),
+  nav:
+    (
+      text: $black
+    ),
+  button:
+    (
+      background--action: $action,
+      background--base: $base,
+      background--action-hover: $action-light,
+      background--base-hover: $base-light,
+      color--action: $white,
+      color--base: $white,
+      color--action-shadow: $base,
+      color--base-shadow: $base-darkest
+    )
+);

@@ -1,0 +1,8 @@
+<meta property="og:site_name" content="{{ site.title }}" />
+<meta property="og:title" content="{{page.title}}" />
+<meta property="og:url" content="{{page.url | prepend: site.url }}" />
+<meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines}}{% else %}{{ site.description }}{% endif %}" />
+<meta property="og:image" content="{{page.image | prepend: site.url | uri_escape}}" />
+{% if site.fb_sdk_app_id != 999 %}
+<meta property="fb:app_id" content="{{site.fb_sdk_app_id}}" />
+{% endif %}
